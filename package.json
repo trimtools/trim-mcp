@@ -2,13 +2,14 @@
   "name": "trim-dev-tools-mcp",
   "version": "1.0.0",
   "description": "Developer utility tools for AI agents via MCP. JSON formatting, base64, hashing, UUID generation, regex testing, URL encoding, and more.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "type": "module",
   "bin": {
-    "trim-mcp": "./index.js"
+    "trim-mcp": "./dist/index.js"
   },
   "scripts": {
-    "start": "node index.js"
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
   "keywords": [
     "mcp",
@@ -26,7 +27,12 @@
   "author": "Trim (trimtools.dev)",
   "license": "MIT",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.0.0"
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "@types/node": "^20.0.0"
   },
   "homepage": "https://trimtools.dev",
   "repository": {
